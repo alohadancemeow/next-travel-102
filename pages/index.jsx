@@ -16,7 +16,7 @@ export default function Home() {
   // # Custom Hook
   const [theme, toggleTheme] = useDarkMode()
 
-  const themeMode = theme === 'light' ? darkTheme : lightTheme
+  const themeMode = theme === 'light' ? lightTheme : darkTheme
 
   return (
     <>
