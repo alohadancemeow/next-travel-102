@@ -19,9 +19,11 @@ const Discover = () => {
     return (
         <DiscoverSection id="discover">
             <DiscoverTitle>
-                Discover <br />
-                <p>You can go anywhere you want, <br /> But don't forget your toothbrush.</p>
+                Discover
             </DiscoverTitle>
+            <DiscoverDesc>
+                You can go anywhere you want, <br /> But don't forget your toothbrush.
+            </DiscoverDesc>
             <DiscoverContainer>
                 <Swiper
                     effect='coverflow'
@@ -74,17 +76,14 @@ const DiscoverSection = styled.section`
 
 const DiscoverTitle = styled.h2`
     font-size: 1.25rem;
-    color: hsl(190, 64%, 18%);
     text-align: center;
     text-transform: uppercase;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
+`
 
-    p {
-        margin-top: .75rem;
-        text-transform: none;
-        font-size: .75rem;
-        font-weight: 500;
-    }
+const DiscoverDesc = styled.p`
+    text-align: center;
+    margin-bottom: 1rem;
 `
 
 const DiscoverContainer = styled.div`

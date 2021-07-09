@@ -82,7 +82,7 @@ const AboutTitle = styled.h2`
     text-align: center;
     text-transform: capitalize;
     margin-bottom: 2rem;
-    color: hsl(190, 64%, 18%);
+    /* color: hsl(190, 64%, 18%); */
 
     @media screen and (min-width: 768px) {
         margin-bottom: 1.5rem;

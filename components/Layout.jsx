@@ -5,7 +5,7 @@ import Navbar from './Navbar'
 import Footer from './Footer'
 import ScrollToTop from './ScrollToTop'
 
-const Layout = ({ title, keywords, description, children }) => {
+const Layout = ({ title, keywords, description, children, theme, toggleTheme }) => {
     return (
         <div>
             <Head>
@@ -15,7 +15,7 @@ const Layout = ({ title, keywords, description, children }) => {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            <Navbar />
+            <Navbar theme={theme} toggleTheme={toggleTheme} />
             <main>{children}</main>
             <Footer />
             <ScrollToTop />

@@ -1,4 +1,5 @@
-import GlobalStyle from "../styles/GlobalStyle"
+import GlobalStyle, { lightTheme, darkTheme } from "../styles/GlobalStyle"
+import { ThemeProvider } from 'styled-components'
 import Layout from "../components/Layout"
 import Hero from "../components/Hero"
 import About from "../components/About"
@@ -8,19 +9,29 @@ import Contact from '../components/Contact'
 import Experience from "../components/Experience"
 import Places from "../components/Places"
 
+import { useDarkMode } from '../styles/useDarkMode'
+
 export default function Home() {
+
+  // # Custom Hook
+  const [theme, toggleTheme] = useDarkMode()
+
+  const themeMode = theme === 'light' ? darkTheme : lightTheme
+
   return (
     <>
-      <Layout>
-        <GlobalStyle />
-        <Hero />
-        <About />
-        <Discover />
-        <Experience />
-        <Video />
-        <Places />
-        <Contact />
-      </Layout>
+      <ThemeProvider theme={themeMode}>
+        <Layout theme={theme} toggleTheme={toggleTheme}>
+          <GlobalStyle />
+          <Hero />
+          <About />
+          <Discover />
+          <Experience />
+          <Video />
+          <Places />
+          <Contact />
+        </Layout>
+      </ThemeProvider>
     </>
   )
 }

@@ -64,7 +64,6 @@ const ExpSection = styled.section`
 
 const ExpTitle = styled.h2`
     font-size: 1.25rem;
-    color: hsl(190, 64%, 18%);
     text-align: center;
     text-transform: capitalize;
     margin-bottom: 2rem;

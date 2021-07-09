@@ -7,7 +7,7 @@ const ScrollToTop = () => {
 
     // # State
     const [scroll, setScroll] = useState(false)
-    console.log(scroll);
+    // console.log(scroll);
 
     // # Go to top, when clicked
     const toTop = () => window.scrollTo(0, 0)

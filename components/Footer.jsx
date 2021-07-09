@@ -130,10 +130,6 @@ const FooterDataHeading = styled.h3`
     margin-bottom: .5rem;
     font-size: 1.5rem;
     cursor: pointer;
-    
-    a {
-        color: hsl(190, 64%, 18%);
-    }
 `
 
 const FooterDataDesc = styled.p`
@@ -147,7 +143,7 @@ const FooterDataSocialItem = styled.div`
     
     a {
         font-size: 1.25rem;
-        color: hsl(190, 64%, 18%);
+        color: ${({ theme }) => theme.title};
         margin-right: 1.25rem;
     }
 `
@@ -167,7 +163,11 @@ const DataItem = styled.li`
 
 const DataItemLink = styled.div`
     a {
-        color: hsl(190, 24%, 35%);
+        color: ${({ theme }) => theme.subTitle};
+
+        &:hover {
+            color: ${({ theme }) => theme.linkHover}
+        }
     }
 `
 

@@ -4,7 +4,8 @@ import styled from 'styled-components'
 // import Link from 'next/link'
 import { Link } from 'react-scroll'
 
-const Navbar = () => {
+const Navbar = ({ theme, toggleTheme }) => {
+    console.log(theme);
 
     // # Navdata
     const navData = [
@@ -39,13 +40,21 @@ const Navbar = () => {
     const [click, setClick] = useState(false)
     const [scroll, setScroll] = useState(false)
 
-    console.log(click);
+    // console.log(click);
 
     // # Mobile icon
     const handleClick = () => setClick(!click)
     const closeMobileMenu = () => setClick(false)
 
+    // # Toggle icon theme
+    const toggleThemeIcon = () => (
+        theme === 'light'
+            ? <i className="ri-sun-line"></i>
+            : <i className="ri-moon-line"></i>
+    )
 
+
+    // # Effect: onScroll
     useEffect(() => {
 
         const onScroll = () => {
@@ -95,9 +104,9 @@ const Navbar = () => {
                         }
                     </NavList>
 
-                    <DarkMode scroll={scroll}>
+                    <DarkMode scroll={scroll} onClick={toggleTheme}>
                         <span>Dark Mode</span>
-                        <i className="ri-moon-line"></i>
+                        {toggleThemeIcon()}
                     </DarkMode>
 
                     <CloseMenu onClick={closeMobileMenu}>
@@ -127,7 +136,7 @@ const Header = styled.header`
     z-index: 100;
     /* background-color: hsl(190, 64%, 22%); */
     /* background-color: transparent; */
-    background-color: ${({ scroll }) => (scroll ? '#fff' : 'transparent')};
+    background-color: ${({ scroll, theme }) => (scroll ? theme.body : 'transparent')};
 `
 
 const Container = styled.nav`
@@ -155,7 +164,7 @@ const Container = styled.nav`
 
 const NavLogo = styled.a`
     /* color: #fff; */
-    color: ${({ scroll }) => (scroll ? 'hsl(190, 24%, 35%)' : '#fff')};
+    color: ${({ scroll, theme }) => (scroll ? (!theme.body) : '#fff')};
     font-weight: 600;
     cursor: pointer;
 `
@@ -167,7 +176,7 @@ const NavMenu = styled.div`
         padding: 3rem;
         right: ${({ click }) => (click ? 0 : '-100%')};
         top: 0;
-        background-color: hsl(190, 100%, 99%);
+        background-color: ${({ theme }) => theme.body};
         width: 60%;
         height: 100%;
         box-shadow: -1px 0 4px rgba(14, 55, 63, 0.15);
@@ -200,24 +209,26 @@ const NavListItem = styled.li`
 
 const NavListItemLink = styled(Link)`
     cursor: pointer;
-    color: hsl(190, 8%, 60%);
+    /* color: hsl(190, 8%, 60%); */
+    color: ${({ theme }) => !theme.body};
     text-decoration: none;
+    opacity: .8;
 
     &:hover {
-        color: hsl(190, 24%, 35%);
+        color: ${({ theme }) => !theme.body};
     }
 
     &.active {
-        border-bottom: 2px solid ${({ scroll }) => (scroll ? 'hsl(190, 24%, 35%)' : '#fff')};
+        opacity: 1;
+        border-bottom: 2px solid ${({ scroll, theme }) => (scroll ? (!theme.body) : '#fff')};
     }
 
     @media screen and (min-width: 768px) {
-        /* color: #fff; */
-        color: ${({ scroll }) => (scroll ? 'hsl(190, 24%, 35%)' : '#fff')};
+        color: ${({ scroll, theme }) => (scroll ? (!theme.body) : '#fff')};
         text-transform: initial;
     
         &:hover {
-            color: ${({ scroll }) => (scroll ? 'hsl(190, 24%, 35%)' : '#fff')};
+            color: ${({ scroll, theme }) => (scroll ? (!theme.body) : '#fff')};
         }
     }
 `
@@ -229,7 +240,7 @@ const DarkMode = styled.div`
     position: absolute;
     left: 3rem;
     bottom: 4rem;
-    color: hsl(190, 24%, 35%);
+    color: ${({ theme }) => !theme.body};
     cursor: pointer;
     font-size: 1rem;
 
@@ -246,7 +257,7 @@ const DarkMode = styled.div`
         }
         
         i {
-            color: ${({ scroll }) => (scroll ? 'hsl(190, 24%, 35%)' : '#fff')};
+            color: ${({ scroll, theme }) => (scroll ? (!theme.body) : '#fff')};
         }
     }
 `
@@ -254,7 +265,10 @@ const DarkMode = styled.div`
 const MobileMenu = styled.div`
     font-size: 1.2rem;
     cursor: pointer;
-    color: ${({ scroll }) => (scroll ? 'hsl(190, 24%, 35%)' : '#fff')};
+
+    i {
+        color: ${({ scroll, theme }) => (scroll ? (!theme.body) : '#fff')};
+    }
 
     @media screen and (min-width: 768px) {
         display: none;
@@ -268,7 +282,7 @@ const CloseMenu = styled.div`
         top: 0.75rem;
         right: 1rem;
         font-size: 1.5rem;
-        color: hsl(190, 24%, 35%);
+        color: ${({ theme }) => !theme.body};
         cursor: pointer;
     }
 

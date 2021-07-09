@@ -45,7 +45,7 @@ const ContactSection = styled.section`
 
 const ContactBg = styled.div`
     padding: 2.5rem 0;
-    background-color: hsl(190, 64%, 22%);
+    background-color: ${({ theme }) => theme.second};
 
     @media screen and (min-width: 768px) {
         background: none;
@@ -59,7 +59,7 @@ const ContactContainer = styled.div`
     margin-right: 1rem;
 
     @media screen and (min-width: 768px) {
-        background-color: hsl(190, 64%, 22%);
+        background-color: ${({ theme }) => theme.second};
         padding: 3.5rem 0;
     }
 
@@ -92,7 +92,7 @@ const ContactDesc = styled.p`
 `
 
 const ContactForm = styled.form`
-    background-color: hsl(190, 24%, 97%);
+    background-color: ${({ theme }) => theme.input};
     padding: 0.5rem;
     display: flex;
     justify-content: space-between;
@@ -106,8 +106,8 @@ const ContactForm = styled.form`
 const Contactinput = styled.input`
     /* width: 70%; */
     padding-right: 0.5rem;
-    background-color: hsl(190, 24%, 97%);
-    color: hsl(190, 24%, 35%);
+    background-color: ${({ theme }) => theme.input};
+    color: ${({ theme }) => theme.subTitle};
     outline: none;
 
     @media screen and (min-width: 768px) {

@@ -89,7 +89,6 @@ const VideoTitle = styled.h2`
     font-size: 1.25rem;
     text-align: center;
     text-transform: uppercase;
-    color: hsl(190, 64%, 18%);
     margin-bottom: 2rem;
 `
 

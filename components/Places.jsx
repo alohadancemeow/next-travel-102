@@ -9,10 +9,12 @@ const Places = () => {
 
     return (
         <PlaceSection>
-            <PleceTitle>
+            <PlaceTitle>
                 Choose your place
-                <p>When you're in a good place, we're happy for you.</p>
-            </PleceTitle>
+            </PlaceTitle>
+            <PlaceDesc>
+                When you're in a good place, we're happy for you.
+            </PlaceDesc>
             <PlaceContainer>
                 {
                     placeData.map(item => (
@@ -27,7 +29,7 @@ const Places = () => {
                                     <PleacRateNumber>{item.rate}</PleacRateNumber>
                                 </PlaceRate>
                                 <PlaceData>
-                                    <PlaceTitle>{item.title}</PlaceTitle>
+                                    <PlaceHeading>{item.title}</PlaceHeading>
                                     <PlaceSubTitle>{item.subTitle}</PlaceSubTitle>
                                     {/* <PlacePrice>{item.price}</PlacePrice> */}
                                 </PlaceData>
@@ -55,19 +57,16 @@ const PlaceSection = styled.section`
     }
 `
 
-const PleceTitle = styled.h2`
+const PlaceTitle = styled.h2`
     font-size: 1.25rem;
-    color: hsl(190, 64%, 18%);
     text-align: center;
     text-transform: uppercase;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
+`
 
-    p {
-        margin-top: .75rem;
-        text-transform: none;
-        font-size: .75rem;
-        font-weight: 500;
-    }
+const PlaceDesc = styled.p`
+    text-align: center;
+    margin-bottom: 2rem;
 `
 
 const PlaceContainer = styled.div`
@@ -117,11 +116,6 @@ const PlaceCard = styled.div`
 const PlaceImage = styled.img`
     height: 230px;
     transition: 0.4s;
-    /* overflow: hidden; */
-
-    /* &:hover {
-        transform: scale(1.1);
-    } */
 
     @media screen and (min-width: 1024px) {
         /* height: 263px; */
@@ -161,7 +155,7 @@ const PleacRateNumber = styled.span`
 
 const PlaceData = styled.div``
 
-const PlaceTitle = styled.h3`
+const PlaceHeading = styled.h3`
     font-size: 1rem;
     margin-bottom: .25rem;
     color: #fff;
