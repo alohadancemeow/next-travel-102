@@ -3,13 +3,20 @@ import 'remixicon/fonts/remixicon.css'
 import Link from 'next/link'
 import styled from 'styled-components'
 
+import 'aos/dist/aos.css';
+
 import { footerData } from '../data/FooterData'
 
 const Footer = () => {
 
     return (
         <FooterSection>
-            <FooterContainer>
+            <FooterContainer
+                data-aos="fade-down"
+                data-aos-easing="linear"
+                data-aos-duration="1200"
+                data-aos-once="true"
+            >
                 <FooterContent>
                     <FooterData>
                         <FooterDataHeading>

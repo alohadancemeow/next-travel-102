@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import 'aos/dist/aos.css';
+
 const Experience = () => {
 
     const expData = [
@@ -24,7 +26,12 @@ const Experience = () => {
     return (
         <ExpSection>
             <ExpTitle>We earn your gold (currency),<br /> you gain experience.</ExpTitle>
-            <ExpContainer>
+            <ExpContainer
+                data-aos="fade-down"
+                data-aos-easing="linear"
+                data-aos-duration="1200"
+                data-aos-once="true"
+            >
                 <ExpContent>
                     {
                         expData.map(item => (

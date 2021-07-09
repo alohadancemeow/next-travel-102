@@ -3,12 +3,20 @@ import styled from 'styled-components'
 import 'remixicon/fonts/remixicon.css'
 import Link from 'next/link'
 
+import 'aos/dist/aos.css';
+
 const About = () => {
     return (
         <AboutSection id="about">
             <AboutContainer>
 
-                <AboutContent>
+                <AboutContent
+                    data-aos="fade-right"
+                    data-aos-offset="300"
+                    data-aos-easing="ease-in-sine"
+                    data-aos-duration='1500'
+                    data-aos-once="true"
+                >
                     <AboutTitle>
                         More Information <br /> About The Best Places
                     </AboutTitle>
@@ -22,9 +30,16 @@ const About = () => {
                             <a>Reserve a place</a>
                         </Link>
                     </AboutButton>
+
                 </AboutContent>
 
-                <AboutImage>
+                <AboutImage
+                    data-aos="fade-left"
+                    data-aos-offset="300"
+                    data-aos-easing="ease-in-sine"
+                    data-aos-duration='1200'
+                    data-aos-once="true"
+                >
                     <ImageBox1>
                         <img src="/images/v-images/v-image1.jpg" alt="image-box1" />
                     </ImageBox1>

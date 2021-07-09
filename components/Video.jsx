@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react'
 import 'remixicon/fonts/remixicon.css'
 import styled from 'styled-components'
 
+import 'aos/dist/aos.css';
+
 const Video = () => {
 
     // # State
@@ -52,12 +54,24 @@ const Video = () => {
         <VideoSection>
             <VideoTitle>Video By Drone</VideoTitle>
             <VideoContainer>
-                <VideoDescription>
+                <VideoDescription
+                    data-aos="fade-right"
+                    data-aos-offset="300"
+                    data-aos-easing="ease-in-sine"
+                    data-aos-duration='1500'
+                    data-aos-once="true"
+                >
                     Find out more with our video of the most beautiful and pleasant places for you and your family, <br />
                     And your housekeeper.
                 </VideoDescription>
 
-                <VideoContent>
+                <VideoContent
+                    data-aos="fade-left"
+                    data-aos-offset="300"
+                    data-aos-easing="ease-in-sine"
+                    data-aos-duration='1500'
+                    data-aos-once="true"
+                >
                     <video id="video-file" >
                         <source
                             src="/videos/muk.mp4"

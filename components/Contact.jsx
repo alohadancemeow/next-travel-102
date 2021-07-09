@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import 'aos/dist/aos.css';
+
 const Contact = () => {
     return (
         <ContactSection id="contact">
@@ -9,22 +11,36 @@ const Contact = () => {
                     <ContactText>
                         Let's keep in touch
                     </ContactText>
-                    <ContactDesc>
+                    <ContactDesc
+                        data-aos="fade-right"
+                        data-aos-offset="300"
+                        data-aos-easing="ease-in-sine"
+                        data-aos-duration='1500'
+                        data-aos-once="true"
+                    >
                         Hi there! let's talk about the exp you've earned from Mukdahan, <br />
                         How's it going?
                     </ContactDesc>
-                    <ContactForm
+
+                    <div
                         action="mailto:rabbit.bot@outlook.com"
+                        data-aos="fade-left"
+                        data-aos-offset="300"
+                        data-aos-easing="ease-in-sine"
+                        data-aos-duration='1500'
+                        data-aos-once="true"
                     >
-                        <Contactinput
-                            disabled
-                            type="text"
-                            placeholder="Please leave me alone"
-                        />
-                        <ContactButton>
-                            Get in touch
-                        </ContactButton>
-                    </ContactForm>
+                        <ContactForm>
+                            <Contactinput
+                                disabled
+                                type="text"
+                                placeholder="Please leave me alone"
+                            />
+                            <ContactButton>
+                                Get in touch
+                            </ContactButton>
+                        </ContactForm>
+                    </div>
                 </ContactContainer>
             </ContactBg>
         </ContactSection>

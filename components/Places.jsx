@@ -3,6 +3,8 @@ import styled from 'styled-components'
 import 'remixicon/fonts/remixicon.css'
 import Image from 'next/image'
 
+import 'aos/dist/aos.css';
+
 import { placeData } from '../data/PlaceData'
 
 const Places = () => {
@@ -12,10 +14,20 @@ const Places = () => {
             <PlaceTitle>
                 Choose your place
             </PlaceTitle>
-            <PlaceDesc>
+            <PlaceDesc
+                data-aos="fade-down"
+                data-aos-easing="linear"
+                data-aos-duration="1200"
+                data-aos-once="true"
+            >
                 When you're in a good place, we're happy for you.
             </PlaceDesc>
-            <PlaceContainer>
+            <PlaceContainer
+                data-aos="fade-down"
+                data-aos-easing="linear"
+                data-aos-duration="1500"
+                data-aos-once="true"
+            >
                 {
                     placeData.map(item => (
                         <PlaceCard key={item.id}>

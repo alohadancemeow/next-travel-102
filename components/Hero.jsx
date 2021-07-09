@@ -3,7 +3,10 @@ import 'remixicon/fonts/remixicon.css'
 import Link from 'next/link'
 import styled from 'styled-components'
 
+import 'aos/dist/aos.css';
+
 const Hero = () => {
+
     return (
         <HeroContainer id="home">
             <HeroVideoBg
@@ -14,11 +17,15 @@ const Hero = () => {
                 muted
                 type="video/mp4"
             />
-            <HeroWrapper>
-
+            <HeroWrapper
+                data-aos="fade-down"
+                data-aos-easing="linear"
+                data-aos-duration="1500"
+                data-aos-once="true"
+            >
                 <HeroContent>
-                    <Heading>Discover your place</Heading>
-                    <Content>
+                    <Heading >Discover your place</Heading>
+                    <Content >
                         <span>Explore The <br /> Best </span>
                         <strong>Beautiful <br /> Places</strong>
                     </Content>

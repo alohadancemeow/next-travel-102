@@ -10,6 +10,8 @@ import "swiper/components/effect-coverflow/effect-coverflow.min.css"
 
 import { discoverData } from '../data/DiscoverData'
 
+import 'aos/dist/aos.css';
+
 const Discover = () => {
 
     // # install Swiper modules
@@ -17,14 +19,20 @@ const Discover = () => {
 
 
     return (
-        <DiscoverSection id="discover">
+        <DiscoverSection id='discover' >
             <DiscoverTitle>
                 Discover
             </DiscoverTitle>
             <DiscoverDesc>
                 You can go anywhere you want, <br /> But don't forget your toothbrush.
             </DiscoverDesc>
-            <DiscoverContainer>
+            <DiscoverContainer
+                data-aos="fade-down"
+                data-aos-easing="linear"
+                data-aos-duration="1200"
+                data-aos-once="true"
+            >
+
                 <Swiper
                     effect='coverflow'
                     grabCursor={true}
