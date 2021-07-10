@@ -9,7 +9,7 @@ const Contact = () => {
             <ContactBg>
                 <ContactContainer>
                     <ContactText>
-                        Let's keep in touch
+                        <span>Let's keep in touch</span>
                     </ContactText>
                     <ContactDesc
                         data-aos="fade-right"
@@ -18,8 +18,10 @@ const Contact = () => {
                         data-aos-duration='1500'
                         data-aos-once="true"
                     >
-                        Hi there! let's talk about the exp you've earned from Mukdahan, <br />
-                        How's it going?
+                        <span>
+                            Hi there! let's talk about the exp you've earned from Mukdahan, <br />
+                            How's it going?
+                        </span>
                     </ContactDesc>
 
                     <div

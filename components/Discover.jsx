@@ -24,7 +24,9 @@ const Discover = () => {
                 Discover
             </DiscoverTitle>
             <DiscoverDesc>
-                You can go anywhere you want, <br /> But don't forget your toothbrush.
+                <span>
+                    You can go anywhere you want, <br /> But don't forget your toothbrush.
+                </span>
             </DiscoverDesc>
             <DiscoverContainer
                 data-aos="fade-down"
