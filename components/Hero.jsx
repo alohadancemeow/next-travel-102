@@ -3,12 +3,14 @@ import 'remixicon/fonts/remixicon.css'
 import Link from 'next/link'
 import styled from 'styled-components'
 
+import { FacebookShareButton, TwitterShareButton, LineShareButton } from 'react-share'
+
 import 'aos/dist/aos.css';
 
 const Hero = () => {
 
     return (
-        <HeroContainer id="home">           
+        <HeroContainer id="home">
             <HeroVideoBg
                 src="/videos/mukdahan.mp4"
                 alt="hero-image"
@@ -39,25 +41,31 @@ const Hero = () => {
                 <SocialIcon>
                     <SocialLink>
                         <SocialLinkItem >
-                            <Link href="https://www.facebook.com/">
-                                <a target="_blank">
-                                    <i className="ri-facebook-box-fill"></i>
-                                </a>
-                            </Link>
+                            <FacebookShareButton
+                                url="https://mukdahan-discover.vercel.app/"
+                                quote="Let's traveling in Muk"
+                                hashtag="#Muk"
+                            >
+                                <i className="ri-facebook-box-fill"></i>
+                            </FacebookShareButton>
                         </SocialLinkItem>
                         <SocialLinkItem >
-                            <Link href="https://www.instagram.com/">
-                                <a target="_blank">
-                                    <i className="ri-instagram-fill"></i>
-                                </a>
-                            </Link>
+                            <LineShareButton
+                                url="https://mukdahan-discover.vercel.app/"
+                                title="Let's traveling in Muk"
+                            >
+                                <i class="ri-line-fill"></i>
+                            </LineShareButton>
                         </SocialLinkItem>
-                        <SocialLinkItem  >
-                            <Link href="https://twitter.com/">
-                                <a target="_blank">
-                                    <i className="ri-twitter-fill"></i>
-                                </a>
-                            </Link>
+                        <SocialLinkItem >
+                            <TwitterShareButton
+                                url="https://mukdahan-discover.vercel.app/"
+                                title="Let's traveling in Muk"
+                                hashtags={["Muk", "Mukdahan"]}
+                                via="3rd_rabbitGo"
+                            >
+                                <i className="ri-twitter-fill"></i>
+                            </TwitterShareButton>
                         </SocialLinkItem>
                     </SocialLink>
                 </SocialIcon>
@@ -228,7 +236,7 @@ const SocialLink = styled.div`
 `
 
 const SocialLinkItem = styled.div`
-   a {
+   i {
     color: #fff;
    }
 `
