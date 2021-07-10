@@ -19,11 +19,15 @@ const Layout = ({ title, keywords, description, children, theme, toggleTheme }) 
             <main>
                 {children}
 
-                <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+                <script
+                    src="https://unpkg.com/aos@next/dist/aos.js"
+                    strategy="beforeInteractive"
+                >
+                </script>
                 <script>
                     AOS.init();
                 </script>
-                
+
             </main>
             <Footer />
             <ScrollToTop />
