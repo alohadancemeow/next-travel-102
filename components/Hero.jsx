@@ -8,17 +8,7 @@ import 'aos/dist/aos.css';
 const Hero = () => {
 
     return (
-        <HeroContainer id="home">
-
-            <script
-                src="https://unpkg.com/aos@next/dist/aos.js"
-                strategy="beforeInteractive"
-            >
-            </script>
-            <script>
-                AOS.init();
-            </script>
-            
+        <HeroContainer id="home">           
             <HeroVideoBg
                 src="/videos/mukdahan.mp4"
                 alt="hero-image"

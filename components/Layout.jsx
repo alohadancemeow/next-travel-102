@@ -19,7 +19,6 @@ const Layout = ({ title, keywords, description, children, theme, toggleTheme }) 
             <main>{children}</main>
             <Footer />
             <ScrollToTop />
-
         </div>
     )
 }
