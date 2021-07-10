@@ -9,6 +9,16 @@ const Hero = () => {
 
     return (
         <HeroContainer id="home">
+
+            <script
+                src="https://unpkg.com/aos@next/dist/aos.js"
+                strategy="beforeInteractive"
+            >
+            </script>
+            <script>
+                AOS.init();
+            </script>
+            
             <HeroVideoBg
                 src="/videos/mukdahan.mp4"
                 alt="hero-image"
