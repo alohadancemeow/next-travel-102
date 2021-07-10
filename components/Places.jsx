@@ -20,7 +20,7 @@ const Places = () => {
                 data-aos-duration="1200"
                 data-aos-once="true"
             >
-                <span>When you're in a good place, we're happy for you.</span>
+                When you&apos;re in a good place, we&apos;re happy for you.
             </PlaceDesc>
             <PlaceContainer
                 data-aos="fade-down"

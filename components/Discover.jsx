@@ -24,9 +24,7 @@ const Discover = () => {
                 Discover
             </DiscoverTitle>
             <DiscoverDesc>
-                <span>
-                    You can go anywhere you want, <br /> But don't forget your toothbrush.
-                </span>
+                You can go anywhere you want, <br /> But don&apos;t forget your toothbrush.
             </DiscoverDesc>
             <DiscoverContainer
                 data-aos="fade-down"
@@ -34,7 +32,6 @@ const Discover = () => {
                 data-aos-duration="1200"
                 data-aos-once="true"
             >
-
                 <Swiper
                     effect='coverflow'
                     grabCursor={true}
