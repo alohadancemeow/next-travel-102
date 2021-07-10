@@ -54,7 +54,7 @@ const Hero = () => {
                                 url="https://mukdahan-discover.vercel.app/"
                                 title="Let's traveling in Muk"
                             >
-                                <i class="ri-line-fill"></i>
+                                <i className="ri-line-fill"></i>
                             </LineShareButton>
                         </SocialLinkItem>
                         <SocialLinkItem >

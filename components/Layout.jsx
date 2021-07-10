@@ -12,7 +12,7 @@ const Layout = ({ title, keywords, description, children, theme, toggleTheme }) 
                 <title>{title}</title>
                 <meta name="keywords" content={keywords} />
                 <meta name="description" content={description} />
-                <link rel="icon" href="/favicon.ico" />
+                <link rel="icon" href="/icon4.png" />
             </Head>
 
             <Navbar theme={theme} toggleTheme={toggleTheme} />
