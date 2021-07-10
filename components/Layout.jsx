@@ -20,6 +20,11 @@ const Layout = ({ title, keywords, description, children, theme, toggleTheme }) 
             <Footer />
             <ScrollToTop />
 
+            <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+            <script>
+                AOS.init();
+            </script>
+            
         </div>
     )
 }
