@@ -16,7 +16,15 @@ const Layout = ({ title, keywords, description, children, theme, toggleTheme }) 
             </Head>
 
             <Navbar theme={theme} toggleTheme={toggleTheme} />
-            <main>{children}</main>
+            <main>
+                {children}
+
+                <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+                <script>
+                    AOS.init();
+                </script>
+                
+            </main>
             <Footer />
             <ScrollToTop />
 
