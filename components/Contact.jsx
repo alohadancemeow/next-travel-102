@@ -18,19 +18,20 @@ const Contact = () => {
                         data-aos-duration='1500'
                         data-aos-once="true"
                     >
-                            Hi there! let&apos;s talk about the exp you&apos;ve earned from Mukdahan, <br />
-                            How&apos;s it going?
+                        Hi there! let&apos;s talk about the exp you&apos;ve earned from Mukdahan, <br />
+                        How&apos;s it going?
                     </ContactDesc>
 
                     <div
-                        action="mailto:rabbit.bot@outlook.com"
                         data-aos="fade-left"
                         data-aos-offset="300"
                         data-aos-easing="ease-in-sine"
                         data-aos-duration='1500'
                         data-aos-once="true"
                     >
-                        <ContactForm>
+                        <ContactForm
+                            action="mailto:rabbit.bot@outlook.com"
+                        >
                             <Contactinput
                                 disabled
                                 type="text"
