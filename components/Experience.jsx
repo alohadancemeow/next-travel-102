@@ -45,10 +45,16 @@ const Experience = () => {
 
                 <ExpImageBox>
                     <ImageBox1>
-                        <img src="/images/image10.jpg" alt="exp-image" />
+                        <ImageItem
+                            src="/images/image10.jpg"
+                            alt="exp-image"
+                        />
                     </ImageBox1>
                     <ImageBox2>
-                        <img src="/images/v-images/v-image1.jpg" alt="exp-image" />
+                        <ImageItem
+                            src="/images/v-images/v-image1.jpg"
+                            alt="exp-image"
+                        />
                     </ImageBox2>
                 </ExpImageBox>
 
@@ -133,15 +139,11 @@ const ExpImageBox = styled.div`
 const ImageBox1 = styled.div`
     width: 263px;
     margin-right: 2rem;
-    overflow: hidden;
+    overflow: hidden; 
 
-    img {
-        transition: .3s;
-
-        &:hover {
-            transform: scale(1.1);
-        }
-    }
+    &:hover img {
+        transform: scale(1.1);
+     }
 
     @media screen and (min-width: 768px) {
         width: 363px;
@@ -153,6 +155,11 @@ const ImageBox1 = styled.div`
         margin-right: 7rem;
     }
 `
+
+const ImageItem = styled.img`
+    transition: .3s;
+`
+
 const ImageBox2 = styled.div`
     width: 120px;
     position: absolute;
@@ -160,12 +167,8 @@ const ImageBox2 = styled.div`
     right: 0;
     overflow: hidden;
 
-    img {
-        transition: .3s;
-
-        &:hover {
-            transform: scale(1.1);
-        }
+    &:hover img {
+        transform: scale(1.1);
     }
 
     @media screen and (min-width: 768px) {

@@ -40,12 +40,18 @@ const About = () => {
                     data-aos-duration='1200'
                     data-aos-once="true"
                 >
-                    <ImageBox1>
-                        <img src="/images/v-images/v-image1.jpg" alt="image-box1" />
-                    </ImageBox1>
-                    <ImageBox2>
-                        <img src="/images/image4.jpg" alt="image-box2" />
-                    </ImageBox2>
+                    <AboutImageWrapper>
+                        <ImageBox1
+                            src="/images/v-images/v-image1.jpg"
+                            alt="image-box1"
+                        />
+                    </AboutImageWrapper>
+                    <AboutImageWrapper>
+                        <ImageBox2
+                            src="/images/image4.jpg"
+                            alt="image-box2"
+                        />
+                    </AboutImageWrapper>
                 </AboutImage>
 
             </AboutContainer>
@@ -132,36 +138,28 @@ const AboutImage = styled.div`
     justify-content: center;
 `
 
-const ImageBox1 = styled.div`
+const AboutImageWrapper = styled.div`
     overflow: hidden;
 
-    img {
-        width: 180px;
-        transition: 0.3s;
-
-        &:hover {
-            transform: scale(1.1);
-        }
-
-        @media screen and (min-width: 1024px) {
-            width: 250px;
-        }
+    &:hover img {
+        transform: scale(1.1);
     }
 `
 
-const ImageBox2 = styled.div`
-     overflow: hidden;
+const ImageBox1 = styled.img`
+    width: 180px;
+    transition: 0.3s;
 
-    img {
-        width: 230px;
-        transition: 0.3s;
+    @media screen and (min-width: 1024px) {
+        width: 250px;
+    }
+`
 
-        &:hover {
-            transform: scale(1.1);
-        }
+const ImageBox2 = styled.img`
+    width: 230px;
+    transition: 0.3s;
 
-        @media screen and (min-width: 1024px) {
-            width: 340px;
-        }
+    @media screen and (min-width: 1024px) {
+         width: 340px;
     }
 `

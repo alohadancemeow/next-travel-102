@@ -73,7 +73,10 @@ const Hero = () => {
                         </Link>
                     </InfoText>
                     <InfoImage>
-                        <img src="/images/image2.jpg" alt="more-image" />
+                        <ImageItem
+                            src="/images/image2.jpg"
+                            alt="more-image"
+                        />
                     </InfoImage>
                 </InfoBox>
 
@@ -282,17 +285,17 @@ const InfoText = styled.div`
 `
 const InfoImage = styled.div`
     overflow: hidden;
-
-    img {
-        width: 145px;
-        transition: 0.3s;
-
-        &:hover {
-            transform: scale(1.2);
-        }
-
-        @media screen and (min-width: 1024px) {
-            width: 300px;
-        }
+    width: 145px;
+        
+    &:hover img {
+        transform: scale(1.2);
     }
+
+    @media screen and (min-width: 1024px) {
+        width: 300px;
+    }
+`
+
+const ImageItem = styled.img`
+    transition: 0.3s;
 `

@@ -53,7 +53,10 @@ const Discover = () => {
                             <SwiperSlide key={item.id}>
                                 <DiscoverCard>
                                     <ImageBox>
-                                        <img src={item.imageUrl} alt="discover-images" />
+                                        <ImageItem
+                                            src={item.imageUrl}
+                                            alt="discover-images"
+                                        />
                                     </ImageBox>
                                     <TextBox>
                                         <Title>{item.title}</Title>
@@ -134,18 +137,15 @@ const DiscoverCard = styled.div`
 `
 
 const ImageBox = styled.div`
-    /* width: 100%; */
+    overflow: hidden;
 
-    img {
-        /* max-width: fit-content; */
-        /* height: 350px; */
-        /* height: fit-content; */
-        transition: 0.3s;
+    &:hover img {
+        transform: scale(1.1);
+    } 
+`
 
-        &:hover {
-            transform: scale(1.1);
-        }
-    }
+const ImageItem = styled.img`
+    transition: 0.3s;
 `
 
 const TextBox = styled.div`
