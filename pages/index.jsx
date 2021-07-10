@@ -23,6 +23,12 @@ export default function Home() {
       <ThemeProvider theme={themeMode}>
         <Layout theme={theme} toggleTheme={toggleTheme}>
           <GlobalStyle />
+
+          <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+          <script>
+            AOS.init();
+          </script>
+
           <Hero />
           <About />
           <Discover />
