@@ -119,5 +119,10 @@ export const discoverData = [
         imageUrl: '/images/v-images/v-image20.jpg',
         desc: '24 hours available'
     },
-
+    {
+        id: 21,
+        title: 'Muk',
+        imageUrl: '/images/image5.jpg',
+        desc: '24 hours available'
+    },
 ]
