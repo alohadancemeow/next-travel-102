@@ -33,7 +33,7 @@ const Hero = () => {
                     </Content>
                     <ExploreBtn>
                         <Link href="#about">
-                            <a>Explore</a>
+                            <span>Explore</span>
                         </Link>
                     </ExploreBtn>
                 </HeroContent>
@@ -74,10 +74,10 @@ const Hero = () => {
                     <InfoText>
                         <span>Find best places to visit</span>
                         <Link href="#about">
-                            <a>
+                            <span>
                                 More
                                 <i className="ri-arrow-right-line"></i>
-                            </a>
+                            </span>
                         </Link>
                     </InfoText>
                     <InfoImage>

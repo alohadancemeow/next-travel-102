@@ -1,12 +1,10 @@
 import React from 'react'
-import Link from 'next/link'
-import Image from 'next/image'
 import styled from 'styled-components'
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { EffectCoverflow, Autoplay } from 'swiper';
-import 'swiper/swiper.min.css';
-import "swiper/components/effect-coverflow/effect-coverflow.min.css"
+import 'swiper/css';
+import "swiper/css/effect-coverflow"
 
 import { discoverData } from '../data/DiscoverData'
 

@@ -27,7 +27,7 @@ const About = () => {
                     </AboutDescrription>
                     <AboutButton>
                         <Link href="#discover">
-                            <a>Reserve a place</a>
+                            <span>Reserve a place</span>
                         </Link>
                     </AboutButton>
 

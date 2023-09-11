@@ -21,9 +21,9 @@ const Footer = () => {
                     <FooterData>
                         <FooterDataHeading>
                             <Link href="#">
-                                <a>
+                                <span>
                                     Mukdahan
-                                </a>
+                                </span>
                             </Link>
                         </FooterDataHeading>
                         <FooterDataDesc>
@@ -32,30 +32,30 @@ const Footer = () => {
                         <FooterDataSocial>
                             <FooterDataSocialItem>
                                 <Link href="https://www.facebook.com/">
-                                    <a target="_blank">
+                                    <span target="_blank">
                                         <i className="ri-facebook-box-fill"></i>
-                                    </a>
+                                    </span>
                                 </Link>
                             </FooterDataSocialItem>
                             <FooterDataSocialItem>
                                 <Link href="https://github.com/alohadancemeow/">
-                                    <a target="_blank">
+                                    <span target="_blank">
                                         <i className="ri-github-fill"></i>
-                                    </a>
+                                    </span>
                                 </Link>
                             </FooterDataSocialItem>
                             <FooterDataSocialItem>
                                 <Link href="https://twitter.com/">
-                                    <a target="_blank">
+                                    <span target="_blank">
                                         <i className="ri-twitter-fill"></i>
-                                    </a>
+                                    </span>
                                 </Link>
                             </FooterDataSocialItem>
                             <FooterDataSocialItem>
                                 <Link href="https://store.steampowered.com/">
-                                    <a target="_blank">
+                                    <span target="_blank">
                                         <i className="ri-steam-fill"></i>
-                                    </a>
+                                    </span>
                                 </Link>
                             </FooterDataSocialItem>
                         </FooterDataSocial>
@@ -70,7 +70,7 @@ const Footer = () => {
                                         <DataItem key={index}>
                                             <DataItemLink>
                                                 <Link href={itemLink.url}>
-                                                    <a target="_blank">{itemLink.title}</a>
+                                                    <span target="_blank">{itemLink.title}</span>
                                                 </Link>
                                             </DataItemLink>
                                         </DataItem>
