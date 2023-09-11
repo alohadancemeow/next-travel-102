@@ -37,4 +37,4 @@ npm run dev
 
 #### :wave: Live site
 
-[Mukdahan](https://mukdahan-discover.vercel.app/)
+[Mukdahan](https://mukdahan-travel.netlify.app/)
