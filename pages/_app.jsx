@@ -3,15 +3,9 @@ import Script from "next/script"
 function MyApp({ Component, pageProps }) {
   return (
     <>
-      <Script
-        src="https://unpkg.com/aos@next/dist/aos.js"
-        strategy="beforeInteractive"
-      >
-      </Script>
-      <Script>
+      <Script id="my-script-aos" >
         AOS.init();
       </Script>
-
       <Component {...pageProps} />
     </>
   )
