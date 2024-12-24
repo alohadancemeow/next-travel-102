@@ -1,6 +1,6 @@
 ## 📌 Mukdahan-discover Project
 
-The Mukdahan-discover project is a collaborative effort designed to promote and showcase the beauty of Mukdahan Province, Thailand.  This project serves as a valuable resource for both local residents and potential tourists, providing a platform to learn about and explore the various cultural and natural wonders that Mukdahan has to offer. This project is designed to:
+The Mukdahan-discover project is a collaborative effort designed to promote and showcase the beauty of Mukdahan Province, Thailand. This project is designed to:
 
 - **Empower Travelers**: Equip you with all the necessary information to plan a memorable trip to Mukdahan, from renowned landmarks and hidden gems to local experiences and cultural insights.
 - **Ignite Interest**: Spark your curiosity and ignite a passion for the unique character of Mukdahan, showcasing its vibrant culture, stunning landscapes, and delectable cuisine.
@@ -17,14 +17,12 @@ git clone https://github.com/alohadancemeow/next-travel-102.git
 ```
 
 2. Install Dependencies:
-Once you've cloned the repository, navigate to the project directory and install the required dependencies using npm:
 
 ```bash
 npm install
 ```
 
 3. Start Development:
-With the dependencies in place, you're ready to start developing! Run the following command to launch the development server:
 
 ```bash
 npm run dev
